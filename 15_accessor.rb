@@ -1,7 +1,20 @@
 class Pessoa
-  attr_accessor :nome
+  #attr_accessor :nome
+  def initialize(nome = "teste")
+    @nome = nome
+  end
+
+  def set_nome=(nome)
+    @nome = nome
+  end
+
+  def get_nome
+    @nome
+  end
 end
 
 p1 = Pessoa.new
-p1.nome = "Jackson" # Aqui funciona como um método setter de java ex: pessoa.setNome("Jackson")
-puts p1.nome # getter
+p1.set_nome = "Jackson" #setter
+p1.set_nome = "Joao" #setter
+p1.set_nome = "Jose"
+puts p1.get_nome #getter
